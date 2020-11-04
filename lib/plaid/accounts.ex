@@ -32,8 +32,10 @@ defmodule Plaid.Accounts do
               name: nil,
               mask: nil,
               official_name: nil,
+              pending_microdeposits_verification: nil,
               type: nil,
-              subtype: nil
+              subtype: nil,
+              verification_status: nil
 
     @type t :: %__MODULE__{
             account_id: String.t(),
@@ -42,8 +44,10 @@ defmodule Plaid.Accounts do
             name: String.t(),
             mask: String.t(),
             official_name: String.t(),
+            pending_microdeposits_verification: boolean(),
             type: String.t(),
-            subtype: String.t()
+            subtype: String.t(),
+            verification_status: String.t()
           }
 
     defmodule Balance do
